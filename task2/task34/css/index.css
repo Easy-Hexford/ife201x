@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.checkerboard {
+    position: relative;
+    border-collapse: collapse;
+}
+
+tr:first-child td, tr td:first-child {
+    border: none;
+    font-weight: bolder;
+}
+
+.checkerboard td {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+}
+
+.content {
+    display: flex;
+    display: -webkit-flex;
+    margin: 0 auto;
+    width: 800px;
+}
+
+.orderPanel {
+    width: 200px;
+    margin:50px 0 0 50px;
+}
+
+.orderPanel p {
+    margin: 4px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+input {
+    outline: none;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color: #aaa;
+    background-color: #fff;
+}
+
+input[type="button"] {
+    margin: 4px;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 160px;
+    padding: 4px;
+}
+
+.moveNode {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: all .5s linear;
+}
+
+.moveNode img{
+    width: 90%;
+    height: 90%;
+}
+
+.input-area {
+    margin: 10px 0;
+    display: flex;
+}
+
+#order-row{
+    list-style: none;
+    overflow: auto;
+    width: 20px;
+    height: 160px;
+    background-color: #ccc;
+}
+
+#order-row li{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 2px 0;
+}
+#order-input {
+    overflow: auto;
+    outline: none;
+    width: 160px;
+    height: 160px;
+    line-height: 20px;
+    background-color: #000;
+    color: green;
+    font-size: 18px;
+    padding: 0 4px;
+}

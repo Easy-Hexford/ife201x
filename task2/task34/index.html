@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task34</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="content">
+        <table class="checkerboard"></table>
+        <div class="orderPanel">
+            <input type="button" class="order" value="go">
+            <input type="button" class="order" value="tun lef">
+            <input type="button" class="order" value="tun rig">
+            <input type="button" class="order" value="tun bac">
+            <input type="button" class="order" value="tra lef">
+            <input type="button" class="order" value="tra rig">
+            <input type="button" class="order" value="tra top">
+            <input type="button" class="order" value="tra bot">
+            <input type="button" class="order" value="mov lef">
+            <input type="button" class="order" value="mov rig">
+            <input type="button" class="order" value="mov top">
+            <input type="button" class="order" value="mov bot">
+            <h3>输入指令（cmd + step)：</h3>
+            <div class="input-area">
+                <ul id="order-row"></ul>
+                <textarea autofocus id="order-input"></textarea>
+            </div>
+            <input type="button" value="执行" id="conduct">
+            <input type="button" value="清空" id="reset">
+        </div>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
