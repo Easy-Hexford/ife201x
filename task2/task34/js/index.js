@@ -10,7 +10,8 @@ window.onload = function() {
         orderPanel = $(".orderPanel"),
         order_input = $("#order-input"),
         order_row = $("#order-row"),
-        conduct = $("#conduct"),
+        conduct = $("#conduct"),    //执行按钮
+        reset = $("#reset"),    //清空按钮
         cmdList = [];
 
     /**
@@ -32,6 +33,7 @@ window.onload = function() {
             }
             framgent.appendChild(tr);
         }
+        framgent.firstChild.firstChild.innerHTML = "";
         checkerboard.appendChild(framgent);
     }
 
@@ -169,28 +171,26 @@ window.onload = function() {
         };
     };
 
-    var rowChange = function() {
-        var text = order_input.value;
-        var rows = text.split("\n").length;
-        var arr = [];
-        for (var i = 1; i <= rows; i++) {
-            arr.push("<li>" + i + "</li>");
-        }
-        order_row.innerHTML = arr.join("");
-    };
-
+    //添加监听事件
     var addEvent = function() {
-        //添加监听事件
+        //点击按钮执行指令
         addHandler(orderPanel, "click", function(e) {
             if (e.target && e.target.className == "order") {
                 node.conduct()[e.target.value]();
             }
         });
+        //行数随输入改变
         addHandler(order_input, "keyup", function() {
             rowChange();
         });
+        //输入框和行数滚动同步
         addHandler(order_input, "scroll", function() {
             order_row.scrollTop = order_input.scrollTop;
+        });
+        //清空输入指令
+        addHandler(reset, "click", function() {
+            order_input.value = "";
+            order_row.innerHTML = "";
         });
 
         //顺序执行每条指令
@@ -210,6 +210,10 @@ window.onload = function() {
         });
     };
 
+    /**
+     * [cmdCheck 解析指令]
+     * @return {[type]} [返回要执行的指令列表]
+     */
     function cmdCheck() {
         cmdList = [], errLine = [];
         var cmds = order_input.value.split("\n");
@@ -243,6 +247,15 @@ window.onload = function() {
         return cmdList;
     }
 
+    function rowChange() {
+        var text = order_input.value;
+        var rows = text.split("\n").length;
+        var arr = [];
+        for (var i = 1; i <= rows; i++) {
+            arr.push("<li>" + i + "</li>");
+        }
+        order_row.innerHTML = arr.join("");
+    };
 
     createBoard(ROWS, COLUMNS);
     var node = new Node(5, 5); //活动节点
