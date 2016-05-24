@@ -2,9 +2,11 @@
 
     var sign = $("#sign");
     var dialog = new Dialog("pop");
-    addHandler(sign, "click", function(e) {
+            dialog.show();
+
+    EventUtil.addHandler(sign, "click", function() {
         dialog.show();
     });
-
+    DragDrop.enable();
 
 })();
