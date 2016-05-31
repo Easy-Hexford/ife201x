@@ -1,0 +1,40 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 04</title>
+  </head>
+  <style>
+    *{margin:0;padding:0;outline:0}
+    body{padding:20px}
+    .form-group{margin:20px 0;width:500px}
+    .form-group label{display:inline-block;margin-right:20px;width:130px}
+    .form-group input{padding:4px;width:200px}
+    .form-group #add-btn,.form-group input{border:1px solid #ccc;border-radius:5px}
+    .form-group #add-btn{margin-left:150px;width:60px;height:30px;background-color:#fff}
+    #aqi-table{width:25pc;border:1px solid #ccc;border-collapse:collapse}
+    #aqi-table th{border-bottom:1px solid #ccc;background-color:#ccc;color:#fff;text-align:left}
+    #aqi-table td,#aqi-table th{padding:2px;line-height:20px}
+    #aqi-table td{border:none;border-bottom:1px solid #ccc}
+    #aqi-table td button{width:40px;height:6px;line-height:1pc}
+  </style>
+<body>
+
+  <div class="form">
+    <div class="form-group">
+      <label for="aqi-city-input">城市名称：</label>
+      <input id="aqi-city-input" type="text">
+    </div>
+    <div class="form-group">
+      <label for="aqi-value-inupt">空气质量指数：</label>
+      <input id="aqi-value-input" type="text">
+    </div>
+    <div class="form-group">
+      <button id="add-btn">确认添加</button>
+    </div>
+  </div>
+  <table id="aqi-table"></table>
+    <script src="js/task16.js"></script>
+
+</body>
+</html>

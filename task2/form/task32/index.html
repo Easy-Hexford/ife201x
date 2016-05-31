@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单工厂</title>
+    <link rel="stylesheet" href="css/style1.css"/>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <h3>表单生成器</h3>
+    <div id="inputSelector">
+        <label for="name">姓名</label>
+        <input type="checkbox" name="selectInputs" id="name"/>
+        <label for="name">密码</label>
+        <input type="checkbox" name="selectInputs" id="psw"/>
+        <label for="name">重复密码</label>
+        <input type="checkbox" name="selectInputs" id="psw_again"/>
+        <label for="name">邮箱</label>
+        <input type="checkbox" name="selectInputs" id="email"/>
+        <label for="name">电话</label>
+        <input type="checkbox" name="selectInputs" id="phone"/>
+    </div>
+    <div id="styleSelector">
+        <label for="style1">样式一</label>
+        <input type="radio" name="selectStyle" id="style1" value="1"/>
+        <label for="style2">样式二</label>
+        <input type="radio" name="selectStyle" id="style2" value="2"/>
+    </div>
+
+    <input id="initForm" type="button" value="生成表单"/>
+    <div id="yourForm"></div>
+</body>
+</html>

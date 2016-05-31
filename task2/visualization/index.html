@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>排序可视化</title>
+    <link rel="stylesheet" href="css/task19.css">
+</head>
+
+<body>
+    <article>
+        <fieldset>
+            <legend>表单输入</legend>
+            <input type="text" name="number" id="number" placeholder="输入10~100内的数">
+            <div class="btn-group">
+                <input type="button" id="left-in" value="左侧入">
+                <input type="button" id="right-in" value="右侧入">
+                <input type="button" class="delete" id="left-out" value="左侧出">
+                <input type="button" class="delete" id="right-out" value="右侧出">
+                <input type="button" id="random" value="随机产生">
+                <input type="button" id="sort" value="排序"> &nbsp;间隔&nbsp;
+                <select name="speed" id="speed">
+                    <option value="20">10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="200">200</option>
+                </select>
+            </div>
+        </fieldset>
+        <div class="result">
+            <h2>冒泡排序算法可视化</h2>
+            <div class="chart"></div>
+        </div>
+    </article>
+
+    <script src="js/task19.js"></script>
+</body>
+
+</html>

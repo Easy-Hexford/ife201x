@@ -1,0 +1,43 @@
+/*公共样式*/
+
+#initForm{
+    display: block;
+    margin-top: 20px;
+}
+
+#styleSelector{
+    margin-top: 20px;
+}
+
+/*生成表单样式*/
+.label{
+    width: 30%;
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 15px;
+}
+.input{
+    width: 60%;
+    display: inline-block;
+    text-align: left;
+}
+.span{
+    margin-left: 32%;
+    display: block;
+    margin-bottom: 20px;
+    color: gray;
+    font-size: 15px;
+    margin-top: 10px;
+}
+.button{
+    display: block;
+    margin-left: 50% ;
+    width: 100px;
+    height: 30px;
+    background-color: rgb(47, 121, 186);
+    border: none;
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}

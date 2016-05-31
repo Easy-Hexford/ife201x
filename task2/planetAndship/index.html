@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>行星与飞船</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 10px">行星与飞船</h1>
+    <div class="contain">
+        <aside>
+            <div id="commandPanel">
+                <fieldset>
+                    <legend>Command Panel</legend>
+                    <ul>
+                        <li data-id="0">
+                            Spaceship NO.1&nbsp;
+                            <button class="btn" data-type="create">create</button>
+                            <button class="btn" data-type="fly" disabled>fly</button>
+                            <button class="btn" data-type="stop" disabled>stop</button>
+                            <button class="btn" data-type="destory" disabled>destory</button>
+                        </li>
+                        <li data-id="1">
+                            Spaceship NO.2&nbsp;
+                            <button class="btn" data-type="create">create</button>
+                            <button class="btn" data-type="fly">fly</button>
+                            <button class="btn" data-type="stop">stop</button>
+                            <button class="btn" data-type="destory">destory</button>
+                        </li>
+                        <li data-id="2">
+                            Spaceship NO.3&nbsp;
+                            <button class="btn" data-type="create">create</button>
+                            <button class="btn" data-type="fly">fly</button>
+                            <button class="btn" data-type="stop">stop</button>
+                            <button class="btn" data-type="destory">destory</button>
+                        </li>
+                        <li data-id="3">
+                            Spaceship NO.4&nbsp;
+                            <button class="btn" data-type="create">create</button>
+                            <button class="btn" data-type="fly">fly</button>
+                            <button class="btn" data-type="stop">stop</button>
+                            <button class="btn" data-type="destory">destory</button>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div id="consolePanel">
+                <h2>Command History</h2>
+            </div>
+        </aside>
+        <section>
+            <div id="universe">
+                <div class="orbit" id="orbit4">
+                    <div class="orbit" id="orbit3">
+                        <div class="orbit" id="orbit2">
+                            <div class="orbit" id="orbit1">
+                                <div class="planet">planet</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

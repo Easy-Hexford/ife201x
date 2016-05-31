@@ -1,0 +1,61 @@
+t* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Microsoft YaHei UI", sans-serif;
+    padding: 20px;
+}
+
+#form-gra-time {
+    height: 60px;
+    font-size: 20px;
+    padding-left: 100px;
+    padding-top: 20px;  
+}
+#form-gra-time select {
+    margin-left: 100px;
+}
+.aqi-chart-wrap {
+    margin: 40px auto;
+    height: 500px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@keyframes heightAnim {
+    0% {
+        bottom: -300px;
+    }
+    100% {
+        bottom: 0;
+    }
+
+}
+
+.bar {
+    position: relative;
+    float: left;
+    height: 100%;
+    animation: heightAnim .5s ease-in-out;
+}
+
+.day {
+    width: 10px;
+}
+
+.week {
+    width: 50px;
+}
+
+.month {
+    width: 200px;
+}
+
+.bar .histogram {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

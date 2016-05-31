@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+fieldset {
+    width: 450px;
+    min-height: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 20px;
+    padding: 0 4px;
+}
+
+fieldset input {
+    outline: none;
+    padding: 4px;
+}
+
+fieldset button {
+    height: 24px;
+    margin-left: 10px;
+}
+
+.root {
+    color: #6898c2;
+}
+
+ul {
+    list-style: none;
+    padding-left: 30px;
+}
+
+.title:hover {
+    color: #ff0000;
+}
+
+.menu {
+    display: inline-block;
+    margin-left: 20px;
+    color: #6898c2;
+}
+
+.menu span {
+    display: inline-block;
+    margin-right: 4px;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}

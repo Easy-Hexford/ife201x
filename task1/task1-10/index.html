@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task1-10</title>
+    <style>
+        * {box-sizing: border-box;}
+
+        .container {
+            display: -webkit-flex; /* Safari */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 1000px;
+            padding: 0 20px;
+            border: 1px solid #ccc;
+        }
+        
+        .item1, .item2, .item3, .item4 {
+            flex: none;
+            width: 150px;
+            margin: 20px 0;
+            border: 1px solid #f00;
+        }
+        .item1 {height: 120px;}
+        .item2 {height: 100px;}
+        .item3 {height: 40px;}
+        .item4 {height: 200px; border-color: blue}
+
+        @media screen and (max-width: 640px) {
+            .item4 {order : -1;}
+            
+            .container {
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <p style="color: red">第四个子元素只要设置当宽度小于640px时，order=-1，即可提前</p>
+
+    <div class="container">
+        <div class="item1"></div>
+        <div class="item2"></div>
+        <div class="item3"></div>
+        <div class="item4"></div>
+    </div>
+</body>
+</html>

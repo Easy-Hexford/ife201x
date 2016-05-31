@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task29</title>
+</head>
+<style>
+* {box-sizing: border-box;}
+
+form {
+    width: 400px;
+    margin: 50px auto;
+}
+
+label {
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+}
+
+input {
+    outline: none;
+    width: 200px;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type=button] {
+    width: 100px;
+    color: #fff;
+    border: none;
+    background-color: rgb(37, 99, 172);
+    cursor: pointer;
+}
+
+#name_msg {
+    padding-left: 65px;
+    margin-top: 10px;
+    color: #ccc;
+}
+
+#name_msg.ok {
+    color: green;
+}
+
+#name_msg.error {
+    color: red;
+}
+</style>
+
+<body>
+    <form action="#">
+        <div>
+            <label for="name">名称</label>
+            <input type="text" id="name" name="username">
+            <input type="button" id="test" value="验证">
+        </div>
+        <div id="name_msg">必填， 长度为4～16个字符 </div>
+    </form>
+
+    
+    <script>
+    window.onload = function() {
+            var name = document.getElementById('name'),
+                test = document.getElementById("test"),
+                name_msg = document.getElementById("name_msg"),
+                name_length;
+            //定义提示信息
+            var msgs = {
+                err_length: {
+                    msg: "长度应为为4～16个字符",
+                    className: "error"
+                },
+
+                error_blank: {
+                    msg: "长度不能为空",
+                    className: "error"
+                },
+
+                ok: {
+                    msg: "名称格式正确",
+                    className: "ok"
+                }
+            }
+
+            // 校验规则：
+            // 1.字符数为4~16位
+            // 2.每个英文字母、数字、英文符号长度为1
+            // 3.每个汉字，中文符号长度为2
+            test.addEventListener("click", function() {
+                name_length = getLength(name.value.trim());
+                var msg;
+                if (name_length == 0) {
+                    msg = msgs.error_blank;
+                    name.style.borderColor = "red";
+                } else if (name_length < 4 || name_length > 16) {
+                    msg = msgs.err_length;
+                    name.style.borderColor = "red";
+                } else {
+                    msg = msgs.ok;
+                    name.style.borderColor = "green";
+                }
+                updateTips(name_msg, msg);
+            });
+        }
+        //更新底部的信息提示
+    function updateTips(obj, msg) {
+        obj.className = msg.className;
+        obj.innerHTML = msg.msg;
+    }
+
+    function getLength(str) {
+        //找出不是单子节的词替换掉获取长度
+        return str.replace(/[^\x00-xff]/g, "xx").length;
+    }
+    </script>
+</body>
+
+</html>

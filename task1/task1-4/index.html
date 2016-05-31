@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>task1-4-1</title>
+
+    <style type="text/css">
+        body {
+            width: 100%;
+            height: 100%;
+        }
+        #parent {
+            position: absolute;
+            background-color: #CCC;
+            width: 400px;
+            min-height: 200px;
+            /*margin: -100px 0 0 -200px;*/
+            transform: translate(-50%,-50%);
+            top: 50%;
+            left: 50%;
+            overflow: hidden;
+            word-break: break-all;
+        }
+        #leftChild, #rightChild{
+            position: absolute;
+            background-color: #fc0;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        #leftChild {
+            top: -50px;
+            left: -50px;
+        }
+        #rightChild {
+            right: -50px;
+            bottom: -50px;
+        }
+    </style>
+
+</head>
+<body>
+    <p style="color: red">当居中元素宽度和高度都不明确时，可以设置transform: translate(-50%,-50%),保持水平垂直居中</br>
+        当高度已知时，可以利用margin来垂直居中
+    </p>
+    <div id="parent">
+        asdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasd
+         asdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasd
+          asdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasd asdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasdasdfasdfasd
+        <div id="leftChild"></div>
+        <div id="rightChild"></div>
+    </div>
+</body>
+</html>

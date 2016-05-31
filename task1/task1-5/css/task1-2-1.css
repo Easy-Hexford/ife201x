@@ -1,0 +1,205 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #000;
+    font-size: 14px;
+    background-color: rgb(214, 214, 214);
+    font-family: "Microsoft YaHei UI", sans-serif;
+}
+
+h1, h2 {
+    margin-bottom: 10px;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.center {
+    width: 94%;
+    margin: 0 auto;
+}
+
+#main-content {
+    min-width: 600px;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(38, 38, 38);
+    color: #FFF;
+}
+
+span.title {
+    font-size: 24px;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+#nav {
+    float: right;
+    line-height: 60px;
+}
+
+#nav li {
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#nav a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+#nav a:hover {
+    color: rgb(214, 214, 214);
+    text-decoration: underline;
+}
+
+#container {
+    margin-right: 380px;
+}
+
+article {
+    background-color: #FFF;
+    padding: 15px;
+    margin: 20px 0;
+    word-break: normal;
+    box-sizing: border-box;
+
+}
+
+.content p {
+    line-height: 2em;
+    text-indent: 2em;
+}
+
+#go_page {
+    list-style-type: none;
+    margin-left: 2em;
+}
+
+#go_page li {
+    padding: 4px;
+}
+
+ul#images li{
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.image {
+    text-align: center;
+    border: 1px solid rgb(190, 190, 190);
+    width: 160px;
+    height: 160px;
+    padding: 10px 0;
+}
+
+.image_info {
+    margin-bottom: 20px;
+}
+
+.image img {
+    width: 120px;
+    height: 120px
+}
+
+#location {
+    margin-left: 2em;
+}
+
+#location li {
+    list-style-position: inside;
+    padding: 4px;
+}
+
+#player_order {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#player_order th, #player_order td {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 6px;
+    text-align: left;
+}
+
+#player_order th {
+    background-color: rgb(38, 38, 38);
+    color: #FFF;
+}
+
+#player_order tr.alt td {
+    background-color: rgb(190, 190, 190);
+}
+
+#register {
+    float: right;
+    width: 360px;
+}
+
+#register article {
+    margin: 0;
+}
+
+.sidebar_title {
+    border-left: 4px solid rgb(190, 190, 190);
+    padding: 4px 10px;
+    margin-bottom: 20px;
+}
+
+.form {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.form input {
+    padding: 4px;
+}
+
+.form .left {
+    display: inline-block;
+    width: 30%;
+    text-align: right;
+}
+
+.form .right {
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.form #self_intro {
+    vertical-align: top;
+}
+
+#submit {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: rgb(36, 55, 201);
+    color: #FFF;
+    font-size: 18px;
+    border: none;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    color: #FFF;
+    text-align: center;
+    background-color: rgb(38, 38, 38);
+}

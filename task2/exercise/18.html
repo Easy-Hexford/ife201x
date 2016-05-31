@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>task6</title>
+    <style>
+    .btn-group {
+        display: inline-block;
+        margin-left: 40px;
+    }
+    
+    .result {
+        margin-top: 30px;
+    }
+    
+    .result span {
+        display: inline-block;
+        height: 30px;
+        line-height: 30px;
+        background-color: red;
+        margin-right: 10px;
+        padding: 0 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <input type="text" name="number" id="number">
+    <div class="btn-group">
+        <button id="left-in">左侧入</button>
+        <button id="right-in">右侧入</button>
+        <button id="left-out">左侧出</button>
+        <button id="right-out">左侧右</button>
+    </div>
+    <div class="result"></div>
+    <script>
+    /*简化选择器*/
+    function $(ele) {
+        return document.querySelector(ele);
+    }
+    var queue = [];
+
+    /*给button添加点击事件，获取输入框中的值*/
+    $(".btn-group").addEventListener("click", function(e) {
+        var value = $("#number").value.trim();
+        if (!isNumber(value))
+            return alert("输入无效的值");
+        value = parseInt(value);
+        if (e.target && e.target.nodeName.toLowerCase() === "button") {
+            if (!process(e.target.id, value))
+                alert("队列已空");
+        }
+    });
+    $(".result").addEventListener("click", function(e) {
+        var node = e.target;
+        if (node && node.nodeName.toLowerCase() === "span") {
+            var index = [].indexOf.call(node.parentNode.childNodes, node);
+            queue.splice(index, 1);
+            node.parentNode.removeChild(node);
+        }
+    });
+
+    function process(id, value) {
+        switch (id) {
+            case "left-in":
+                queue.unshift(value);
+                break;
+            case "right-in":
+                queue.push(value);
+                break;
+            case "left-out":
+                if (queue.length === 0)
+                    return false;
+                queue.shift();
+                break;
+            case "right-out":
+                if (queue.length === 0)
+                    return false;
+                queue.pop();
+                break;
+        }
+        render();
+        return true;
+    }
+
+    //渲染数组
+    function render() {
+        var content = queue.map(function(v) {
+            return "<span>" + v + "</span>";
+        }).join("");
+        $(".result").innerHTML = content;
+    }
+
+    //验证输入是否为数字
+    function isNumber(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+    </script>
+</body>
+
+</html>

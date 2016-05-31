@@ -1,0 +1,65 @@
+.panel {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border: 1px solid #ced0d3;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1)
+}
+.panel .head {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ced0d3;;
+    background-color: #f4f5f7;
+}
+.panel .content {
+    flex: 1;
+    min-height: 100px;
+    padding: 10px 0;
+    background-color: #fff;
+}
+
+.dateTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+.dateTable th {
+    width: 14.2%;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-top: 2px solid #a9cfec;
+    border-bottom: 2px solid #ced0d3;
+}
+.dateTable td {
+    width: 14.2%;
+    height: 44px;
+    padding: 2px 0;
+}
+.dateTable td span{
+    display: inline-block;
+    padding-top: 5px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #2a2e3d;
+}
+.dateTable td.festival small {
+    color: rgb(208,75,54);
+}
+.dateTable td.weekend span{
+    color: rgb(208,75,54);
+}
+.dateTable td.weekend small {
+    color: #2a2e3d;
+}
+.dateTable td.active span, .dateTable td:hover span {
+    background-color: rgb(31,34,47);
+    color: white;
+}
+.dateTable td.active small, .dateTable td:hover small {
+    color: white;
+}

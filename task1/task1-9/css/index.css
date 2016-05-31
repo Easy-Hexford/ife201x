@@ -1,0 +1,425 @@
+/*这里采用了FontAwesome的字体库，不想切图。。。*/
+/*顶部样式*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin-left: 50px;
+}
+.login-box {
+    display: flex;
+    flex: 0 0 420px;
+    margin-right: 100px;
+    justify-content: flex-end;
+    align-items: center;
+}
+.login a {
+    font-size: 16px;
+    color: white;
+}
+.search {
+    display: flex;
+    align-items: center;
+    flex: 0 0 315px;
+    border: 1 solid transparent;
+    border-radius: 14px;
+    height: 28px;
+    margin-right: 20px;
+    background-color: white;
+}
+.icon-search {
+    margin: 0 10px;
+}
+.search input {
+    outline: none;
+    flex: 1;
+    margin-right: 20px;
+    line-height: 28px;
+    border: none;
+}
+/*面包屑样式*/
+.crumbs {
+    padding-left: 40px;
+    line-height: 30px;
+    height: 30px;
+    background-color: white;
+}
+.crumbs a:last-child {
+    color: rgb(33,137,191);
+}
+
+/*主体内容样式*/
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main section {
+    width: 890px;
+    margin-top: 20px;
+}
+
+/*查询区域样式*/
+.searchy {
+    background-color: white;
+}
+.searchy form{
+    display: flex;
+    height: 85px;
+    padding-top: 15px;
+}
+.form-group {
+    margin-left: 30px;
+    color: #999;
+}
+.form-group .member {
+    display: inline-block;
+}
+.form-group select{
+    /*清除默认的下拉样式*/
+    /*-moz-appearance:none;*/
+    /*-webkit-appearance:none;*/
+    border: 1px solid #999;
+    border-radius: 0;
+    outline: none;
+    height: 25px;
+    width: 100px;
+    margin-left: 10px;
+    padding:0 5px;
+    background-color: white;
+    color: black;
+}
+.buyer, .seller, .date, .number, .time, .total{
+    margin-bottom: 5px;
+}
+
+/*历史查询样式*/
+.history {
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    background-color: transparent;
+}
+.history .arrow,.history .item,.history .query {
+    height: 65px;
+    background-color: white;
+}
+.arrow {
+    display: block;
+    width: 30px;
+    color: #999;
+    text-align: center;
+    line-height: 65px;
+}
+.history .item {
+    display: flex;
+    flex-basis: 110px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 2px solid transparent;
+}
+.history .item.active, .history .item:hover {
+    border-top: 2px solid rgb(33,137,191);
+}
+.money {color: #c6c6c6;}
+.money-num {
+    font-size: 21px;
+    color: #ec6500;
+}
+.query {
+    display: flex;
+    flex-basis: 130px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.query img {
+    margin-right: 10px;
+}
+
+/*统计资料样式*/
+.static {
+    background-color: transparent;
+}
+.static .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.static .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+    border: 1px solid #ced0d3;
+    padding: 0 10px;
+    background-color: white;
+}
+.static .info {
+    flex-basis: 60px;
+}
+.static .info small {
+    color: #c6c6c6;
+}
+.static .item .box {
+    width: 61px;
+    height: 47px;
+}
+.static .item:nth-child(1) {
+    border-left: 4px solid rgb(68,178,158);
+}
+.static .item:nth-child(2) {
+    border-left: 4px solid rgb(33,137,191);
+}
+.static .item:nth-child(3) {
+    border-left: 4px solid rgb(208,75,54);
+}
+.static .item:nth-child(4) {
+    border-left: 4px solid rgb(226,205,70);
+}
+
+/*右侧四个面板样式*/
+/*小hack，下表格加上-margin，与上面的表头重叠，隐藏边框*/
+
+/*项目材料样式*/
+section.info {
+    display: flex;
+    justify-content: space-between;
+}
+ul.tab-head {
+    margin-left: 20px;
+}
+.tab-head li{
+    display: inline-block;
+    width: 82px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    border: 1px solid #ededef;
+    border-bottom-color: #ced0d3; 
+    background-color: #ededef;
+    margin-right: 4px;
+    cursor: pointer;
+}
+.tab-head li.active {
+    border: 1px solid #ced0d3;
+    border-radius: 3px 3px 0 0;
+    border-bottom-color: white;
+    background-color: white;
+}
+.tab-body {
+    margin: 0 20px 20px;
+    margin-top: -1px;
+    border: 1px solid #ced0d3;
+    border-radius: 0 3px 3px;
+}
+.meterial {
+    margin: 28px 38px;
+    border-collapse: collapse;
+}
+.meterial td {
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ced0d3;
+}
+
+/*项目信息样式*/
+.project {
+    width: 350px;
+    padding: 0 35px 25px;
+}
+.project ol {
+    border: 1px solid #ced0d3;
+    border-left: none;
+    border-right: none; 
+}
+.project li {
+    display: inline-block;
+    padding: 10px 20px 0 10px;
+}
+.project li:first-child {
+    border-right: 1px solid #ced0d3;
+}
+.project .describe {
+    height: 100px;  
+    padding: 10px 0;
+    border-bottom: 1px solid #ced0d3;
+}
+.project .footer {
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-between;
+    align-items: center;
+    color: #c6c6c6;
+}
+
+/*日历样式*/
+.calendar {
+    width: 350px;
+    padding: 0 20px;
+}
+.calendar .time {
+    display: flex;
+    justify-content: space-between;
+}
+.calendar .time div {
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #ced0d3;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.calendar .time .icon {
+    display: inline-block;
+    float: right;
+    width: 15px;
+    height: 18px;
+    border: none;
+    border-left: 1px solid #EEEEED;
+}
+.calendar .month, .calendar .today {
+    width: 60px;
+}
+.calendar .year, .calendar .option {
+    width: 85px;
+}
+.dateTable {
+    margin-top: 10px;
+}
+.dateTable .holi {
+    color: #d4454a;
+}
+
+/*汽车排行样式*/
+.carRank {
+    width: 445px;
+    margin: 10px 40px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.carRank th, .carRank td {
+    height: 25px;
+    border: 1px solid #ced0d3;
+}
+.carRank tr.selected {
+    background-color: #f4f5f6;
+}
+.search-index {
+    display: flex;
+    height: 25px;
+    justify-content: center;
+    align-items: center;
+}
+.search-index .index{
+    margin-right: 10px;
+}
+.carRank .bar {
+    width: 165px;
+    height: 4px;
+    background-color: #dcdcdc;
+}
+.col-20 {
+    width: 20%;
+}
+.col-60 {
+    width: 60%;
+}
+.per-80, .per-70, .per-60, .per-50, .per-40 {
+    height: 4px;
+}
+.per-80 {width: 80%;}
+.per-70 {width: 70%;}
+.per-60 {width: 60%;}
+.per-50 {width: 50%;}
+.per-40 {width: 40%;}
+
+/*左侧导航栏样式*/
+nav .inner {
+    color: #6e8096;
+ }
+nav .person-info {
+    padding: 30px 20px 20px 50px;
+}
+nav .person-info .item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+nav .person-info .circle {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 1px solid #b9babe;
+    margin-right: 20px;
+}
+nav .person-info .sm-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #b9babe;
+    margin: 0 auto;
+    margin-top: 4px;
+}
+nav .person-info .name {
+    color: white;
+    font-size: 16px;
+}
+nav .person-info .item2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.person-info .item2 div:hover {
+    color: rgb(208,75,54);
+}
+.person-info .item2 div {display: inline-block;}
+.person-info .item2 div:nth-child(1) {
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+nav ul.catalog li {
+    cursor: pointer;
+}
+nav ul.catalog li.item {
+    padding: 5px 0;
+    line-height: 30px;
+    padding-left: 50px;
+}
+nav ul.catalog li.active > span {
+    color: #ededf0;
+}
+nav li:hover {
+    background-color: #383d4e;
+}
+nav li.item.active {
+    background-color: #383d4e;
+}
+nav li.item ul.catalog {
+    margin-left: 20px;
+}
+nav li.item ul.catalog li {
+    line-height: 25px;
+}
+nav .icon-chevron-right {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    transition:transform 0.5s;
+    -moz-transition:transform 0.5s; /* Firefox 4 */
+    -webkit-transition:transform 0.5s; /* Safari and Chrome */
+    -o-transition:transform 0.5s; /* Opera */
+}
+nav .icon-chevron-right:hover {
+    transform:rotate(90deg);
+    -ms-transform:rotate(90deg);     /* IE 9 */
+    -moz-transform:rotate(90deg);    /* Firefox */
+    -webkit-transform:rotate(90deg); /* Safari 和 Chrome */
+    -o-transform:rotate(90deg);  /* Opera */
+}

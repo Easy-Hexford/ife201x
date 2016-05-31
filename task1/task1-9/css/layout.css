@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    font: 12px/1.2 "Microsoft YaHei", sans-serif;
+}
+header {
+    flex: 1;
+    height: 56px;
+}
+.body {
+    display: flex;
+    flex: 1;
+    min-height: 1200px;
+}
+nav {
+    flex: 0 0 260px;
+    order: -1;
+    background-color: rgb(42,46,61);
+}
+.content {
+    flex: 1;
+    background-color: #eeeeed;
+}

@@ -1,0 +1,72 @@
+.bg-blue {
+    background-color: rgb(33,137,191);
+}
+.bg-green {
+    background-color: rgb(68,178,158);
+}
+.bg-orange {
+    background-color: rgb(208,75,54);
+}
+.bg-yellow {
+    background-color: rgb(226,205,70);
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+h3 {
+  margin-bottom: 5px;  
+}
+p {
+    margin: 10px 0;
+}
+ul {
+    list-style-type: none;
+}
+.w-grey {
+    color: #c6c6c6;
+}
+.btn-search {
+    text-align: center;
+    width: 50px;
+    height: 25px;
+    background-color: rgb(33,137,191);
+    line-height: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+[class^="sp"] {
+    display: inline-block;
+    background: url(../images/sprite.png) no-repeat;
+}
+.sp-user {
+    width: 18px;
+    height: 18px;
+    background-position: -9px -819px;
+}
+.sp-search {
+    width: 18px;
+    height: 18px;
+    background-position: -9px -738px;
+}
+.sp-exchange {
+    width: 41px;
+    height: 63px;
+    background-position: -5px -914px;
+    line-height: 60px;
+    color:white;
+    vertical-align: top;
+}
+.sp-pre, .sp-next {
+    cursor: pointer;
+    width: 30px;
+    height: 65px;
+    background-color: white;
+}
+.sp-pre {
+    background-position: 0 -264px;
+}
+.sp-next {
+    background-position: 1px -342px;
+}

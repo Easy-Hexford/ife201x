@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>遍历二叉树</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    article {
+        width: 800px;
+        margin: 100px auto;
+    }
+
+    .binary-tree div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border: 1px solid #000;
+        background-color: #fff;
+    }
+    
+    .root {
+        width: 800px;
+        height: 300px;
+    }
+    
+    .root div {
+        width: 45%;
+        height: 80%;
+        padding: 10px;
+    }
+    
+    .operator {
+        width: 800px;
+        margin-top: 20px;
+    }
+
+    .operator button {
+        width: 80px;
+        height: 30px;
+        margin-right: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1>二叉树遍历</h2>
+        <div class="binary-tree">
+            <div class="root">
+                <div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="operator">
+            <button id="preOrder">前序</button>
+            <button id="inOrder">中序</button>
+            <button id="postOrder">后序</button>
+            <label for="speed">变速器</label>&nbsp;
+            <select name="speed" id="speed">
+                <option value="400">慢</option>
+                <option value="200" selected>中</option>
+                <option value="50">快</option>
+            </select>
+        </div>
+    </article>
+    <script src="js/util.js"></script>
+    <script src="js/task22.js"></script>
+</body>
+
+</html>

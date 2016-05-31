@@ -1,0 +1,198 @@
+body {
+    font: 14px "微软雅黑";
+}
+
+.item1,
+.item2,
+.item3 {
+    margin: 20px;
+}
+
+.table-rank th {
+    text-align: left;
+    color: #fff;
+    background-color: #000;
+}
+
+.table-rank tr:nth-child(odd) {
+    background-color: rgb(193, 190, 191);
+}
+
+.table-rank tr:nth-child(even) {
+    background-color: #fff;
+}
+
+.table-rank .head3 {
+    color: red;
+}
+
+form input {
+    width: 100px;
+    height: 20px;
+    border-radius: 5px;
+    outline: none;
+    transition: width 1s;
+    -moz-transition: width 1s;
+    /* Firefox 4 */
+    -webkit-transition: width 1s;
+    /* Safari 和 Chrome */
+    -o-transition: width 1s;
+    /* Opera */
+}
+
+form input:focus {
+    width: 200px;
+}
+
+.wrap {
+    position: relative;
+    text-align: center;
+    width: 400px;
+    height: 300px;
+    border: 1px solid #9cc5ef;
+    color: #fff;
+    overflow: hidden;
+}
+
+.slider {
+    text-align: center;
+    width: 300%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 100px/300px "微软雅黑";
+    -webkit-animation: slide1 3s ease-out infinite;
+}
+
+.slider li {
+    float: left;
+    width: 400px;
+    height: 100%;
+}
+
+.slider li:nth-child(1) {
+    background-color: #6bacef;
+}
+
+.slider li:nth-child(2) {
+    background: #297cd3;
+}
+
+.slider li:nth-child(3) {
+    background: #01254a;
+}
+
+
+/*创建三种动画策略*/
+
+@-webkit-keyframes slide1 {
+    0% {
+        margin-left: 0;
+    }
+    23% {
+        margin-left: 0;
+    }
+    33% {
+        margin-left: -400px;
+    }
+    56% {
+        margin-left: -400px;
+    }
+    66% {
+        margin-left: -800px;
+    }
+    90% {
+        margin-left: -800px;
+    }
+    100% {
+        margin-left: 0;
+    }
+}
+
+@-webkit-keyframes slide2 {
+    0% {
+        margin-left: -400px;
+    }
+    23% {
+        margin-left: -400px;
+    }
+    33% {
+        margin-left: -800px;
+    }
+    56% {
+        margin-left: -800px;
+    }
+    66% {
+        margin-left: 0;
+    }
+    90% {
+        margin-left: 0;
+    }
+    100% {
+        margin-left: -400px;
+    }
+}
+
+@-webkit-keyframes slide3 {
+    0% {
+        margin-left: -800px;
+    }
+    23% {
+        margin-left: -800px;
+    }
+    33% {
+        margin-left: 0;
+    }
+    56% {
+        margin-left: 0;
+    }
+    66% {
+        margin-left: -400px;
+    }
+    90% {
+        margin-left: -400px;
+    }
+    100% {
+        margin-left: -800px;
+    }
+}
+
+
+/*修改动画名称*/
+
+#l01:checked ~ .wrap .slider {
+    -webkit-animation-name: slide1;
+}
+
+#l02:checked ~ .wrap .slider {
+    -webkit-animation-name: slide2;
+}
+
+#l03:checked ~ .wrap .slider {
+    -webkit-animation-name: slide3;
+}
+
+#l01,  #l02, #l03 {
+    display: none;
+}
+
+.opt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.opt label {
+    display: inline-block;
+    width: 40px;
+    height: 30px;
+    margin-right: 2px;
+    line-height: 30px;
+    background-color: #405871;
+    cursor: pointer;
+}
+
+.opt label:hover {
+    background-color: #9CC5EF;
+}

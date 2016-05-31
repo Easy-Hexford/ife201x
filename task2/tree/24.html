@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>树形组件</title>
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/task24.css">
+</head>
+
+<body>
+    <fieldset>
+        <legend>树型组件</legend>
+        <div>
+            <input type="text" placeholder="搜索节点" id="search_text">
+            <button id="search_btn">搜索</button>
+            <p>节点树上右键鼠标弹出功能菜单，支持模糊搜索</p>
+        </div>
+        <ul class="tree">
+            <li class="root">
+                <p>
+                    <i class="iconfont icon-arrowdown">&nbsp;</i>
+                    <span class="title">计算机科学</span></p>
+                <ul>
+                    <li>
+                        <p>
+                            <i class="iconfont icon-arrowdown">&nbsp;</i>
+                            <span class="title">数据挖掘</span></p>
+                        <ul>
+                            <li>
+                                <p><span class="title">百度</span></p>
+                            </li>
+                            <li>
+                                <p><span class="title">腾讯</span></p>
+                            </li>
+                            <li>
+                                <p><span class="title">阿里</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="iconfont icon-arrowdown">&nbsp;</i>
+                            <span class="title">人工智能</span></p>
+                        <ul>
+                            <li>
+                                <p><span class="title">alphgo</span></p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>
+                            <i class="iconfont icon-arrowdown">&nbsp;</i>
+                            <span class="title">数据可视化</span></p>
+                        <ul>
+                            <li>
+                                <p>
+                                    <i class="iconfont icon-arrowdown">&nbsp;</i>
+                                    <span class="title">笑谈人生</span></p>
+                                <ul>
+                                    <p>
+                                        <i class="iconfont icon-arrowdown">&nbsp;</i>
+                                        <span class="title">笑傲江湖</span></p>
+                                    <ul>
+                                        <li>
+                                            <p><span class="title">任我行</span></p>
+                                        </li>
+                                    </ul>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </fieldset>
+    <div class="menu hidden">
+        <span id="add"><i class="iconfont icon-add"></i> 添加</span>
+        <span id="delete"><i class="iconfont icon-delete"></i> 删除</span>
+        <span id="rename"><i class="iconfont icon-edit"></i> 重命名</span>
+    </div>
+    <script src="js/util.js"></script>
+    <script src="js/task24.js"></script>
+</body>
+
+</html>
