@@ -324,7 +324,7 @@
      * @param  {[Commander]} commander [指挥官发送消息]
      */
     var buttonHandler = function(commander) {
-        addHandler($("#commandPanel"), "click", function(e) {
+        EventUtil.addHandler($("#commandPanel"), "click", function(e) {
             if (e.target && e.target.tagName == "BUTTON") {
                 var id = e.target.parentNode.getAttribute("data-id");
                 var command = e.target.getAttribute("data-type");
@@ -341,12 +341,12 @@
         });
     };
 
-    addHandler($("#commandPanel"), "mouseover", function(e) {
+    EventUtil.addHandler($("#commandPanel"), "mouseover", function(e) {
         if (e.target && e.target.tagName == "BUTTON") {
             e.target.style.color = "#000";
         }
     });
-    addHandler($("#commandPanel"), "mouseout", function(e) {
+    EventUtil.addHandler($("#commandPanel"), "mouseout", function(e) {
         if (e.target && e.target.tagName == "BUTTON") {
             e.target.style.color = "#ccc";
         }
